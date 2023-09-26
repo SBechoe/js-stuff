@@ -1,7 +1,7 @@
 //Boxes
 const totalBox = document.querySelector('.total-box');
 const pointsAmountBox = document.querySelector('.points-amount');
-const resultBox  = document.querySelector('.result-box');
+const resultBox = document.querySelector('.result-box');
 
 const totalPoints = document.querySelector('.total-points');
 const confirmPointsBtn = document.querySelector('.confirm');
@@ -15,13 +15,17 @@ confirmPointsBtn.addEventListener('click', confirmPoints);
 calcGradeBtn.addEventListener('click', calculateGrade)
 
 function confirmPoints() {
-    pointsAmountBox.classList.toggle('visible-box');
-    totalBox.classList.toggle('visible-box');
+    if (!totalPoints.value == "") {
+        pointsAmountBox.classList.toggle('visible-box');
+        totalBox.classList.toggle('visible-box');
+    }
 }
 
-function calculateGrade() {    
-    resultBox.classList.toggle('visible-box');
-    grade = (pointsAmount.value / totalPoints.value) * 9 + 1;
+function calculateGrade() {
+    if (!pointsAmount.value == "") {
+        resultBox.classList.toggle('visible-box');
+        grade = (pointsAmount.value / totalPoints.value) * 9 + 1;
 
-    gradeEl.textContent = grade;
+        gradeEl.textContent = grade;
+    }
 }
