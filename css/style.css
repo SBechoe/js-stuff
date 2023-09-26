@@ -1,0 +1,22 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+section{
+    padding: 2%;
+}
+
+.point-box{
+    margin-bottom: 20px;
+}
+
+.visible-box{
+    display: none;
+}
+
+.total-points, .points-amount{
+    margin-top: 10px;
+}
