@@ -23,7 +23,7 @@ function confirmPoints() {
 }
 
 function calculateGrade() {
-    if (!pointsAmount.value == "" && pointsAmount.value < totalPoints.value) {
+    if (!pointsAmount.value == "") {
         grade = (pointsAmount.value / totalPoints.value) * 9 + 1;
         console.log(grade.toFixed(1));
         gradeEl.textContent = grade.toFixed(1);
